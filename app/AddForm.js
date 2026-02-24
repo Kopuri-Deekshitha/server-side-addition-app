@@ -4,9 +4,13 @@ import { useActionState } from "react";
 import { addNumbers } from "./actions";
 
 export default function AddForm() {
-  const [state, formAction] = useActionState(addNumbers, {
-    result: null,
-  });
+  //const [state, formAction] = useActionState(addNumbers, {
+  //  result: null,
+ // });
+
+  const [state, formAction, isPending] = useActionState(addNumbers, {
+  result: null,
+});
 
   return (
     <>
